@@ -202,4 +202,28 @@ npm start start:dev
     }
     ```
 
-    and then : 
+    in postman create post and check in get
+
+    and then install uuid :
+
+    ```bash
+    npm i uuid
+    ``` 
+
+    import in books.service.ts
+    ```bash
+    import { v4 as uuidv4 } from 'uuid';
+    ```
+
+    ```bash
+    createBook(title: string, author: string, category: string) {
+    this.books.push({
+      id: uuidv4(),
+      title,
+      author,
+      category,
+    });
+    }
+    ```
+
+
