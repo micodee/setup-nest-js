@@ -191,4 +191,15 @@ npm start start:dev
     getAllBooks() {
     return this.booksService.getAllBooks()
     }
+
+    @Post()
+    createBook(
+        @Body('title') title: string,
+        @Body('author') author: string,
+        @Body('category') category: string,
+    ) {
+        return this.booksService.createBook(title, author, category);
+    }
     ```
+
+    and then : 
